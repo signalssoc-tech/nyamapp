@@ -1,0 +1,6 @@
+# Jangan pernah commit file berisi SERVICE ROLE key atau secret lain
+.env
+.env.local
+*.key
+node_modules/
+.vercel/

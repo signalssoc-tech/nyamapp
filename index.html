@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FF6B35">
+<title>NYAM — Lagi pengen apa? | Food Delivery Jogja</title>
+<meta name="description" content="Apa pun yang lagi kamu pengenin, cari aja di NYAM. Diantar NYAM Express, Gojek, atau Grab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FF6B35'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>N</text></svg>">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="mobile-topbar" id="mobileTopbar" style="display:none">
+      <div class="top-row">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="logo">NYAM<span>.</span></div>
+          <button class="loc" onclick="go('#/profil')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg> Jogja ▾</button>
+          <span class="chip" id="memberBadgeTop" style="display:none;padding:6px 10px;font-size:11.5px"></span>
+        </div>
+        <div class="top-icons">
+          <button class="icon-btn" onclick="go('#/notifikasi')" aria-label="Notifikasi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span id="notifDot" style="position:absolute;top:10px;right:11px;width:9px;height:9px;background:var(--orange);border-radius:99px;border:2px solid #fff"></span></button>
+          <button class="icon-btn" onclick="go('#/keranjang')" aria-label="Keranjang"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7 5 3H2"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></svg><span class="badge-dot" id="cartBadgeTop" style="display:none">0</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+  </main>
+  <aside class="cart-panel" id="cartPanel"></aside>
+</div>
+<nav class="bottomnav" id="bottomnav"></nav>
+<div class="cta-bar" id="stickyCta" style="display:none"></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="supabase-client.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
